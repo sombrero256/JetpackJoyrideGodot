@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://cf84ht2eo161y"]
+
+[ext_resource type="Script" path="res://Compositions/room.gd" id="1_jtm8b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3k5ws"]
+size = Vector2(1152, 20)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_jtm8b")
+
+[node name="Background" type="Sprite2D" parent="."]
+
+[node name="Floor" type="Sprite2D" parent="."]
+
+[node name="FloorCollider" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FloorCollider"]
+position = Vector2(576, 638)
+shape = SubResource("RectangleShape2D_3k5ws")
+
+[node name="CeilingCollider" type="StaticBody2D" parent="."]
+position = Vector2(-1, -395)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CeilingCollider"]
+position = Vector2(577, 405)
+shape = SubResource("RectangleShape2D_3k5ws")
+
+[node name="RoomSnap" type="Node2D" parent="."]
+position = Vector2(1152, 0)

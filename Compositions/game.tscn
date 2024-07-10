@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://d2bvdym1cvcdu"]
+
+[ext_resource type="PackedScene" uid="uid://djlo7g12ynmij" path="res://Compositions/character.tscn" id="1_faki3"]
+[ext_resource type="Script" path="res://Compositions/GameManager.gd" id="1_jsnop"]
+[ext_resource type="PackedScene" uid="uid://cf84ht2eo161y" path="res://Compositions/room.tscn" id="2_tlldy"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_jsnop")
+
+[node name="PlayerCharacter" parent="." instance=ExtResource("1_faki3")]
+position = Vector2(18, 328)
+
+[node name="Room" parent="." instance=ExtResource("2_tlldy")]
