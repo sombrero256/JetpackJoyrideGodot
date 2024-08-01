@@ -1,11 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://d2bvdym1cvcdu"]
+[gd_scene load_steps=5 format=3 uid="uid://d2bvdym1cvcdu"]
 
 [ext_resource type="PackedScene" uid="uid://djlo7g12ynmij" path="res://Compositions/character.tscn" id="1_faki3"]
-[ext_resource type="Script" path="res://Compositions/GameManager.gd" id="1_jsnop"]
+[ext_resource type="Script" path="res://Scripts/GameManager.gd" id="1_jsnop"]
 [ext_resource type="PackedScene" uid="uid://cf84ht2eo161y" path="res://Compositions/room.tscn" id="2_tlldy"]
+[ext_resource type="PackedScene" uid="uid://c4j333cn2edyg" path="res://Compositions/cg_Bar.tscn" id="4_3m5wo"]
 
-[node name="Node2D" type="Node2D"]
+[node name="GameManager" type="Node2D"]
 script = ExtResource("1_jsnop")
+CoinGroupList = [ExtResource("4_3m5wo")]
 
 [node name="PlayerCharacter" parent="." instance=ExtResource("1_faki3")]
 position = Vector2(18, 328)

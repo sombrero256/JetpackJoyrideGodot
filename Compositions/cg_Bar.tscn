@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://c4j333cn2edyg"]
+
+[ext_resource type="Script" path="res://Scripts/CoinGroup.gd" id="1_umved"]
+[ext_resource type="PackedScene" uid="uid://gr1nc0qcpvml" path="res://Compositions/coin.tscn" id="2_4tjsv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ptcl"]
+size = Vector2(34, 34)
+
+[node name="CoinGroup" type="Node2D"]
+script = ExtResource("1_umved")
+
+[node name="Coin" parent="." instance=ExtResource("2_4tjsv")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_7ptcl")

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://djlo7g12ynmij"]
 
-[ext_resource type="Script" path="res://Compositions/PlayerCharacter.gd" id="1_h5aht"]
+[ext_resource type="Script" path="res://Scripts/PlayerCharacter.gd" id="1_h5aht"]
 [ext_resource type="SpriteFrames" uid="uid://5uhqup1s2p2g" path="res://Sprites/Animations/anim_run.tres" id="1_srsjx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rlirt"]
@@ -8,6 +8,7 @@ size = Vector2(8.61111, 20.8333)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 scale = Vector2(1.5, 1.5)
+collision_mask = 7
 script = ExtResource("1_h5aht")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

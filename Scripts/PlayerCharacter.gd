@@ -1,5 +1,7 @@
 class_name Player extends CharacterBody2D
-
+# Layer 1 = player layer
+# layer 2 = coin / pickup layer
+# layer 3 = trap layer
 
 const SPEED = 300.0
 const INIT_VELOCITY = -100.0
