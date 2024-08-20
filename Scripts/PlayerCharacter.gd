@@ -3,13 +3,12 @@ class_name Player extends CharacterBody2D
 # layer 2 = coin / pickup layer
 # layer 3 = trap layer
 
-const SPEED = 300.0
-const INIT_VELOCITY = -100.0
-const VELOCITY_GAIN = -3000
-const MAX_UP_VELOCITY = -2000
+@export var INIT_VELOCITY: float = -100.0
+@export var VELOCITY_GAIN: float = -3000
+@export var MAX_UP_VELOCITY: float = -2000
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
-var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+@export var gravity: float = 980
 
 @onready var SpritePlayer := $AnimatedSprite2D as AnimatedSprite2D 
 @onready var Collider := $CollisionShape2D as CollisionShape2D
@@ -33,12 +32,5 @@ func _physics_process(delta):
 	
 	if velocity.y < MAX_UP_VELOCITY:
 		velocity.y =  MAX_UP_VELOCITY
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction = Input.get_axis("ui_left", "ui_right")
-	if direction:
-		velocity.x = direction * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()

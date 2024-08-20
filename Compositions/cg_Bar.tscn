@@ -4,12 +4,84 @@
 [ext_resource type="PackedScene" uid="uid://gr1nc0qcpvml" path="res://Compositions/coin.tscn" id="2_4tjsv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ptcl"]
-size = Vector2(34, 34)
+size = Vector2(280, 105)
 
 [node name="CoinGroup" type="Node2D"]
 script = ExtResource("1_umved")
 
+[node name="Coin7" parent="." instance=ExtResource("2_4tjsv")]
+position = Vector2(0, 35)
+
+[node name="Coin8" parent="." instance=ExtResource("2_4tjsv")]
+position = Vector2(105, 35)
+
+[node name="Coin19" parent="." instance=ExtResource("2_4tjsv")]
+position = Vector2(245, 35)
+
+[node name="Coin20" parent="." instance=ExtResource("2_4tjsv")]
+position = Vector2(210, 35)
+
+[node name="Coin21" parent="." instance=ExtResource("2_4tjsv")]
+position = Vector2(245, 70)
+
+[node name="Coin22" parent="." instance=ExtResource("2_4tjsv")]
+position = Vector2(210, 70)
+
+[node name="Coin23" parent="." instance=ExtResource("2_4tjsv")]
+position = Vector2(245, 0)
+
+[node name="Coin24" parent="." instance=ExtResource("2_4tjsv")]
+position = Vector2(210, 0)
+
+[node name="Coin9" parent="." instance=ExtResource("2_4tjsv")]
+position = Vector2(175, 35)
+
+[node name="Coin10" parent="." instance=ExtResource("2_4tjsv")]
+position = Vector2(140, 35)
+
+[node name="Coin11" parent="." instance=ExtResource("2_4tjsv")]
+position = Vector2(70, 35)
+
+[node name="Coin12" parent="." instance=ExtResource("2_4tjsv")]
+position = Vector2(0, 70)
+
+[node name="Coin13" parent="." instance=ExtResource("2_4tjsv")]
+position = Vector2(105, 70)
+
+[node name="Coin14" parent="." instance=ExtResource("2_4tjsv")]
+position = Vector2(175, 70)
+
+[node name="Coin15" parent="." instance=ExtResource("2_4tjsv")]
+position = Vector2(140, 70)
+
+[node name="Coin16" parent="." instance=ExtResource("2_4tjsv")]
+position = Vector2(70, 70)
+
+[node name="Coin17" parent="." instance=ExtResource("2_4tjsv")]
+position = Vector2(35, 70)
+
+[node name="Coin18" parent="." instance=ExtResource("2_4tjsv")]
+position = Vector2(35, 35)
+
 [node name="Coin" parent="." instance=ExtResource("2_4tjsv")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="Coin4" parent="." instance=ExtResource("2_4tjsv")]
+position = Vector2(105, 0)
+
+[node name="Coin5" parent="." instance=ExtResource("2_4tjsv")]
+position = Vector2(175, 0)
+
+[node name="Coin6" parent="." instance=ExtResource("2_4tjsv")]
+position = Vector2(140, 0)
+
+[node name="Coin3" parent="." instance=ExtResource("2_4tjsv")]
+position = Vector2(70, 0)
+
+[node name="Coin2" parent="." instance=ExtResource("2_4tjsv")]
+position = Vector2(35, 0)
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(123, 35.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_7ptcl")

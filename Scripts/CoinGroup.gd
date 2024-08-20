@@ -27,4 +27,3 @@ func _on_coin_collected():
 		group_collected.emit()
 		queue_free()
 	pass
-
